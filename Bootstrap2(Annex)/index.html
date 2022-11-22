@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+    <title>Assignment 5</title>
+    <meta content="Admin Dashboard" name="description">
+    <meta content="Mannatthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ce4fdba713.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body class="fixed-left">
+    <div id="wrapper">
+        <div class="left side-menu" id="sideBar"> 
+            <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left closeBtn" id="closeBtn" onclick="closeSideBar()">
+                <i class="bi bi-x-lg" id="closeIcon"></i>
+            </button>
+            <div class="topbar-left">
+                <div class="text-center">
+                    <a href="#" class="logo"><i class="fa-solid fa-clipboard-check"></i> Annex</a>
+                </div>
+            </div>
+            <div class="sidebar-inner slimscrollleft">
+                <div id="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li>
+                            <a href="index.html" class="active">
+                            <span >
+                                <i class="bi bi-cast sideIcons"></i>&nbsp; &nbsp;Dashboard
+                                <span class="badge badge-pill float-right sevenBadge">7</span>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseOne" role="button" data-target="#collapseOne" data-toggle="collapse" aria-expanded="false">
+                            <a href="#"><i class="bi bi-layers-fill"></i><span>Advanced UI</span><span class="float-right">
+                                <i class="bi bi-chevron-right"></i>
+                            </span></a>
+                            <ul id="collapseOne" aria-expanded="false"  class="collapse list-unstyled ml-0" >
+                                <li><a href="#">Highlight</a></li>
+                                <li><a href="#">Rating</a></li>
+                                <li><a href="#">Alertify</a></li>
+                                <li><a href="#">Range Slider</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="material-icons"></span>
+                                <i class="bi bi-calendar"></i>
+                                <span class="ml-2">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="menu-title">Components</li>
+                        <li class="has_sub nav-item" aria-controls="collapseTwo" role="button" data-target="#collapseTwo" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <span class="material-icons"></span> 
+                            <i class="bi bi-bullseye"></i>
+                            <span>UI Elements </span>
+                            <span class="float-right"><i class="bi bi-chevron-right"></i></span></a>
+                            <ul id="collapseTwo" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="#">Buttons</a></li>
+                                <li><a href="#">Cards</a></li>
+                                <li><a href="#">Tabs &amp; Accordions</a></li>
+                                <li><a href="#">Modals</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li><a href="#">Alerts</a></li>
+                                <li><a href="#">Progress Bars</a></li>
+                                <li><a href="#">Dropdowns</a></li>
+                                <li><a href="#">Lightbox</a></li>
+                                <li><a href="#">Navs</a></li>
+                                <li><a href="#">Pagination</a></li>
+                                <li><a href="#">Popover & Tooltips</a></li>
+                                <li><a href="#">Badge</a></li>
+                                <li><a href="#">Carousel</a></li>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="#">Typography</a></li>
+                                <li><a href="#">Sweet-Alert</a></li>
+                                <li><a href="#">Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseThree" role="button" data-target="#collapseThree" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <span class="material-icons"></span>
+                            <i class="bi bi-clipboard2"></i>
+                            <span> Forms </span><span
+                                    class="badge badge-pill badge-info float-right">8</span></a>
+                            <ul id="collapseThree" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="#">Form Elements</a></li>
+                                <li><a href="#">Form Validation</a></li>
+                                <li><a href="#">Form Advanced</a></li>
+                                <li><a href="#">Form Editors</a></li>
+                                <li><a href="#">Form File Upload</a></li>
+                                <li><a href="#">Form Mask</a></li>
+                                <li><a href="#">Summernote</a></li>
+                                <li><a href="#">Form Xeditable</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseFour" role="button" data-target="#collapseFour" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <i class="bi bi-pie-chart"></i><span> Charts </span><span class="float-right">
+                                <i class="bi bi-chevron-right"></i></span></a>
+                            <ul id="collapseFour" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="#">Morris Chart</a></li>
+                                <li><a href="#">Chartist Chart</a></li>
+                                <li><a href="#">Chartjs Chart</a></li>
+                                <li><a href="#">Flot Chart</a></li>
+                                <li><a href="#">C3 Chart</a></li>
+                                <li><a href="#">Jquery Knob Chart</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseFour" role="button" data-target="#collapseFive" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <i class="bi bi-card-list"></i> <span>Icons </span><span class="float-right"><i class="bi bi-chevron-right"></i></span></a>
+                            <ul  id="collapseFive" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="icons-material.html">Material Design</a></li>
+                                <li><a href="icons-ion.html">Ion Icons</a></li>
+                                <li><a href="icons-fontawesome.html">Font Awesome</a></li>
+                                <li><a href="icons-themify.html">Themify Icons</a></li>
+                                <li><a href="icons-dripicons.html">Dripicons</a></li>
+                                <li><a href="icons-typicons.html">Typicons Icons</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseSix" role="button" data-target="#collapseSix" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <i class="bi bi-table"></i><span> Tables </span><span class="float-right"><i class="bi bi-chevron-right"></i></span></a>
+                            <ul id="collapseSix" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="tables-basic.html">Basic Tables</a></li>
+                                <li><a href="tables-datatable.html">Data Table</a></li>
+                                <li><a href="tables-responsive.html">Responsive Table</a></li>
+                                <li><a href="tables-editable.html">Editable Table</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">Extra</li>
+                        <li class="has_sub nav-item" aria-controls="collapseEight" role="button" data-target="#collapseEight" data-toggle="collapse" aria-expanded="false"><a href="#">
+                            <i class="bi bi-geo-alt-fill"></i><span> Maps </span><span
+                                    class="badge badge-pill badge-danger float-right">2</span></a>
+                            <ul id="collapseEight" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="maps-google.html">Google Map</a></li>
+                                <li><a href="maps-vector.html">Vector Map</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub nav-item" aria-controls="collapseNine" role="button" data-target="#collapseNine" data-toggle="collapse" aria-expanded="false">
+                            <a href="#">
+                                <i class="bi bi-arrows-fullscreen"></i><span> Pages </span><span class="float-right"><i class="bi bi-chevron-right"></i></span>
+                            </a>
+                            <ul id="collapseNine" aria-expanded="false"  class="collapse list-unstyled ml-0">
+                                <li><a href="pages-login.html">Login</a></li>
+                                <li><a href="pages-register.html">Register</a></li>
+                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
+                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                                <li><a href="pages-blank.html">Blank Page</a></li>
+                                <li><a href="pages-404.html">Error 404</a></li>
+                                <li><a href="pages-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="content-page">
+            <div class="content">
+                <div class="topbar">
+                    <nav class="navbar-custom">
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item dropdown notification-list hide-phone">
+                                <div class="nav-link text-white" id="dropdownBtn" data-toggle="dropdown" href="#">
+                                    <span>English</span>
+                                    <img src="assets/us_flag.jpg" alt="" height="16">
+                                </div>
+                                <div class="dropdown dropdown-menu dropdown-menu-right language-switch">
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/italy_flag.jpg" alt="" height="16">
+                                        <span>Italian </span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/french_flag.jpg" alt="" height="16">
+                                        <span>French</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/spain_flag.jpg" alt="" height="16">
+                                        <span>Spanish</span></a>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/russia_flag.jpg" alt="" height="16">
+                                        <span>Russian</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link arrow-none waves-effect" data-toggle="dropdown"
+                                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                    <div class="dropdown-item noti-title">
+                                        <h5><span class="badge badge-danger float-right">745</span>Messages</h5>
+                                    </div><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon"><img src="assets/avatar-2.jpg" alt="user-img"
+                                                class="img-fluid rounded-circle"></div>
+                                        <p class="notify-details"><b>Charles M. Jones</b><small class="text-muted">Dummy
+                                                text of the printing and typesetting industry.</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon"><img src="assets/avatar-3.jpg" alt="user-img"
+                                                class="img-fluid rounded-circle"></div>
+                                        <p class="notify-details"><b>Thomas J. Mimms</b><small class="text-muted">You
+                                                have 87 unread messages</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon"><img src="assets/avatar-4.jpg" alt="user-img"
+                                                class="img-fluid rounded-circle"></div>
+                                        <p class="notify-details"><b>Luis M. Konrad</b><small class="text-muted">It is a
+                                                long established fact that a reader will</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">View
+                                        All</a>
+                                </div>
+                            </li>
+                            <li class="list-inline-item dropdown notification-list"><a
+                                    class="nav-link arrow-none waves-effect" data-toggle="dropdown"
+                                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa-regular fa-bell"></i>
+                                    <span class="badge badge-success noti-icon-badge">23</span></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                    <div class="dropdown-item noti-title">
+                                        <h5><span class="badge badge-danger float-right">87</span>Notification</h5>
+                                    </div><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-primary">
+                                            <i class="fa-solid fa-cart-shopping" id="iconss"></i>
+                                        </div>
+                                        <p class="notify-details"><b>Your order is placed</b><small
+                                                class="text-muted">Dummy text of the printing and typesetting
+                                                industry.</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-success"><i class="fa-solid fa-message" id="iconss"></i></div>
+                                        <p class="notify-details"><b>New Message received</b><small
+                                                class="text-muted">You have 87 unread messages</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-warning"><i class="fa-solid fa-martini-glass" id="iconss"></i></div>
+                                        <p class="notify-details"><b>Your item is shipped</b><small
+                                                class="text-muted">It is a long established fact that a reader
+                                                will</small></p>
+                                    </a><a href="javascript:void(0);" class="dropdown-item notify-item">View All</a>
+                                </div>
+                            </li>
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" 
+                                role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/avatar-1.jpg" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <div class="dropdown-item noti-title"><h5>Welcome</h5></div>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Profile</a> 
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-wallet"></i> My Wallet</a> 
+                                    <a class="dropdown-item" href="#">
+                                        <span class="badge badge-success float-right">5</span>
+                                        <i class="fa-solid fa-gear"></i> Settings
+                                    </a> 
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-lock-open"></i> 
+                                        Lock screen
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left" onclick="openSideBar()">
+                                    <i class="bi bi-list"></i>
+                                </button>
+                            </li>
+                            <li class="hide-phone app-search">
+                                <form role="search" class=""><input type="text" placeholder="Search..."
+                                        class="form-control"> <a href=""><i class="fa fa-search"></i></a></form>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </nav>
+                </div>
+                <div class="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <div class="btn-group float-right">
+                                        <ol class="breadcrumb hide-phone p-0 m-0">
+                                            <li class="breadcrumb-item"><a href="#">Annex</a></li>
+                                            <li class="breadcrumb-item active">Dashboard</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Dashboard</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row">
+                                          
+                                            <div class="col-6 align-self-center text-center">
+                                                <div class="m-l-10">
+                                                    <h5 class="mt-0 round-inner">$1809</h5>
+                                                    <p class="mb-0 text-muted">Visits Today</p>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row">
+                                            <div class="col-3 align-self-center">
+                                             
+                                            </div>
+                                            <div class="col-6 text-center align-self-center">
+                                                <div class="m-l-10">
+                                                    <h5 class="mt-0 round-inner">562</h5>
+                                                    <p class="mb-0 text-muted">New Users</p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row">
+                                            <div class="col-3 align-self-center">
+                                               
+                                            </div>
+                                            <div class="col-6 align-self-center text-center">
+                                                <div class="m-l-10">
+                                                    <h5 class="mt-0 round-inner">7514</h5>
+                                                    <p class="mb-0 text-muted">New Orders</p>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row">
+                                            <div class="col-3 align-self-center">
+      
+                                            </div>
+                                            <div class="col-6 align-self-center text-center">
+                                                <div class="m-l-10">
+                                                    <h5 class="mt-0 round-inner">$3287</h5>
+                                                    <p class="mb-0 text-muted">Total Sales</p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-xl-8">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <h5 class="header-title pb-3 mt-0">Overview</h5>
+                                        <div id="multi-line-chart" style="height:400px;">
+                                            <img src="assets/Graph_1.png" alt="" id="graph1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-xl-4">
+                                <div class="card m-b-30">
+                                    <div class="card-body"><a href="" class="btn btn-primary btn-sm float-right" id="moreBtn">More
+                                            Info</a>
+                                        <h5 class="header-title mt-0 pb-3">Revenue By Country</h5>
+                                        <ul class="list-unstyled list-inline text-center">
+                                            <li class="list-inline-item">
+                                                <p>
+                                                    <i class="fa-solid fa-circle dotOne"></i>Canada
+                                                </p>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <p><i class="fa-solid fa-circle dotTwo"></i>USA</p>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <p>
+                                                    <i class="fa-solid fa-circle dotThree"></i>London
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div id="morris-donut-chart" style="height:345px;">
+                                            <img src="assets/Graph_2.png" alt="" id="graph2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 col-xl-4">
+                                <div class="card bg-info m-b-30">
+                                    <div class="card-body">
+                                        <div id="verticalCarousel" class="carousel slide vertical" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="row d-flex justify-content-center text-center">
+                                                        <div class="col-sm-12 carousel-icon"><i
+                                                                class="fa fa-twitter text-white pt-3"></i></div>
+                                                        <div class="col-6 text-white">
+                                                            <h2>54k</h2>
+                                                            <p class="">Followers</p>
+                                                        </div>
+                                                        <div class="col-6 text-white">
+                                                            <h2>44k</h2>
+                                                            <p class="">Tweets</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <div class="col-sm-12 carousel-icon text-center"><i
+                                                                class="fa fa-twitter text-white pt-3"></i></div>
+                                                        <div class="col-sm-10 mx-auto text-white text-center">
+                                                            <p>Lorem Ipsum is simply dummy text of the <span
+                                                                    class="warning">#TWITTER</span> and typesetting
+                                                                industry. A description list is perfect for defining
+                                                                terms.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-primary">
+                                    <div class="card-body">
+                                        <div id="verticalCarousel2" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <div class="col-lg-12 carousel-icon text-center"><i
+                                                                class="fa fa-facebook text-white pt-3"></i></div>
+                                                        <div class="col-sm-10 mx-auto text-white text-center">
+                                                            <p>Lorem Ipsum is simply dummy text of the <mark>FACEBOOK
+                                                                </mark>and typesetting industry.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="row d-flex justify-content-center text-white text-center">
+                                                        <div class="col-sm-12 carousel-icon"><i
+                                                                class="fa fa-facebook text-white pt-3"></i></div>
+                                                        <div class="col-6">
+                                                            <h2>54k</h2>
+                                                            <p class="">Followers</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <h2>44k</h2>
+                                                            <p class="">Posts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 col-xl-4">
+                                <div class="card bg-white m-b-30">
+                                    <div class="card-body new-user">
+                                        <div class="row text-center">
+                                            <div class="col-6">
+                                                <h5><i class="mdi mdi-database mr-2 text-primary font-20"></i> 5 TB</h5>
+                                                <h6 class="text-lightdark">Bandwidth usage</h6>
+                                                <span class="text-muted"><small>June 2018</small></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5><i class="mdi mdi-download mr-2 text-success font-20"></i>5412</h5>
+                                                <h6 class="text-lightdark">Download count</h6><span
+                                                    class="text-muted"><small>June 2018</small></span>
+                                            </div>
+                                        </div>
+                                        <div id="morris-area-chart" style="height: 310px">
+                                            <img src="assets/Graph_3.png" alt="" id="graph3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-xl-4">
+                                <div class="card bg-white m-b-30"><img src="assets/wather.jpg" alt="" class="img-fluid">
+                                    <div class="card-body weatherCard">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-sm-6 text-center"><canvas
+                                                            id="partly-cloudy-day" width="70" height="70"></canvas>
+                                                        <h6 class="text-white">SUNDAY <span>25<sup>th</sup></span></h6>
+                                                    </div>
+                                                    <div class="col-lg-6 col-sm-6 text-center align-self-center">
+                                                        <h5 class="mt-0 text-white"><b>32°</b></h5>
+                                                        <p class="text-white font-12">Partly cloudy</p>
+                                                        <p class="text-white font-12">15km/h - 37%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 align-self-center">
+                                                <div class="row">
+                                                    <div class="col-6 text-center">
+                                                        <h6 class="text-white mt-0 font-14">MON</h6><canvas id="rain"
+                                                            width="28" height="35"></canvas>
+                                                        <h6 class="text-white font-14">38°<i class="wi-degrees"></i>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <h6 class="text-white mt-0 font-14">TUE</h6><canvas id="wind"
+                                                            width="35" height="35"></canvas>
+                                                        <h6 class="text-white font-14">32°<i class="wi-degrees"></i>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-xl-8 align-self-center">
+                                <div class="card bg-white m-b-30">
+                                    <div class="card-body new-user memberProfile">
+                                        <h5 class="header-title mb-4 mt-0">Members Profiles</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="border-top-0" style="width:60px;">Member</th>
+                                                        <th class="border-top-0">Name</th>
+                                                        <th class="border-top-0">Country</th>
+                                                        <th class="border-top-0">Earnings</th>
+                                                        <th class="border-top-0">Sales</th>
+                                                        <th class="border-top-0">Reviews</th>
+                                                        <th class="border-top-0">Progress</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>
+                                                            <img class="rounded-circle" src="assets/avatar-2.jpg" alt="user" width="50">
+                                                        </td>
+                                                        <td class="nameTD"><a class="nameA" href="javascript:void(0);" >Ruby T. Curd</a></td>
+                                                        <td><img class="flagImg" src="assets/us_flag.jpg" alt="" style="width:30px"></td>
+                                                        <td class="nameTD">$100</td>
+                                                        <td><p id="sales">10</p></td>
+                                                        <td>
+                                                            <div class="small-ratings">
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star-half rating-color"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="progress" style="height:8px;">
+                                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                                    aria-valuenow="94" aria-valuemin="0"
+                                                                    aria-valuemax="100" style="width: 94%;"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><img class="rounded-circle"
+                                                                src="assets/avatar-3.jpg" alt="user"
+                                                                width="50"></td>
+                                                        <td><a href="javascript:void(0);">William A. Johnson</a></td>
+                                                        <td><img src="assets/french_flag.jpg" alt=""
+                                                                style="width:30px"></td>
+                                                        <td>$490</td>
+                                                        <td>24</td>
+                                                        <td>
+                                                            <div class="small-ratings">
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star-half rating-color"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </div>
+                                                            </td>
+                                                        <td>
+                                                            <div class="progress" style="height:8px;">
+                                                                <div class="progress-bar bg-success" role="progressbar"
+                                                                    aria-valuenow="38" aria-valuemin="0"
+                                                                    aria-valuemax="100" style="width: 38%;"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="rounded-circle"
+                                                                src="assets/avatar-4.jpg" alt="user"
+                                                                width="50"></td>
+                                                        <td><a href="javascript:void(0);">Bobby M. Gray</a></td>
+                                                        <td><img src="assets/spain_flag.jpg" alt=""
+                                                                style="width:30px"></td>
+                                                        <td>$380</td>
+                                                        <td>19</td>
+                                                        <td><div class="small-ratings">
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star-half rating-color"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div></td>
+                                                        <td>
+                                                            <div class="progress" style="height:8px;">
+                                                                <div class="progress-bar bg-dark" role="progressbar"
+                                                                    aria-valuenow="65" aria-valuemin="0"
+                                                                    aria-valuemax="100" style="width:65%;"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="rounded-circle"
+                                                                src="assets/avatar-5.jpg" alt="user"
+                                                                width="50"></td>
+                                                        <td><a href="javascript:void(0);">Robert N. Carlile</a></td>
+                                                        <td><img src="assets/russia_flag.jpg" alt=""
+                                                                style="width:30px"></td>
+                                                        <td>$450</td>
+                                                        <td>30</td>
+                                                        <td><div class="small-ratings">
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star rating-color"></i>
+                                                            <i class="fa fa-star-half rating-color"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div></td>
+                                                        <td>
+                                                            <div class="progress" style="height:8px;">
+                                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                                    aria-valuenow="88" aria-valuemin="0"
+                                                                    aria-valuemax="100" style="width: 88%;"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id="tableRow">
+                                                        <td><img class="rounded-circle"
+                                                                src="assets/avatar-6.jpg" alt="user"
+                                                                width="50"></td>
+                                                        <td><a href="javascript:void(0);">Ruby T. Curd</a></td>
+                                                        <td><img src="assets/italy_flag.jpg" alt=""
+                                                                style="width:30px"></td>
+                                                        <td>$500</td>
+                                                        <td>40</td>
+                                                        <td>
+                                                            <div class="small-ratings">
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star rating-color"></i>
+                                                                <i class="fa fa-star-half rating-color"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </div></i>
+                                                        </td>
+                                                        <td>
+                                                            <div class="progress" style="height:8px;">
+                                                                <div class="progress-bar l-blue" role="progressbar"
+                                                                    aria-valuenow="17" aria-valuemin="0"
+                                                                    aria-valuemax="100" style="width: 17%;"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-xl-4">
+                                <div class="card bg-white m-b-30">
+                                    <div class="card-body new-user">
+                                        <h5 class="header-title mt-0 mb-4">New Users</h5>
+                                        <ul class="list-unstyled mb-0 pr-3 boxscroll2">
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left">
+                                                        <a href="#">
+                                                            <img class="rounded-circle" src="assets/avatar-5.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Ruby T. Curd <i
+                                                                class="fa fa-circle text-success mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">Now</small> <small
+                                                            class="text-muted">Newyork</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-4.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">William A. Johnson 
+                                                            <i class="fa fa-circle text-success mr-1 float-right"></i>
+                                                        </p>
+                                                        <small class="float-right text-muted">Now</small> 
+                                                        <small class="text-muted">California</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-3.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Robert N. Carlile<i
+                                                                class="fa fa-circle text-danger mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">10 min ago</small>
+                                                        <small class="text-muted">India</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-2.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Bobby M. Gray <i
+                                                                class="fa fa-circle text-success mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">Now</small> <small
+                                                            class="text-muted">Australia</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-1.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Ruby T. Curd <i
+                                                                class="fa fa-circle text-danger mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">36 min ago</small>
+                                                        <small class="text-muted">New Zealand</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-6.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Robert N. Carlile <i
+                                                                class="fa fa-circle text-success mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">Now</small> <small
+                                                            class="text-muted">India</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="p-3">
+                                                <div class="media">
+                                                    <div class="thumb float-left"><a href="#"><img
+                                                                class="rounded-circle"
+                                                                src="assets/avatar-4.jpg" alt=""></a></div>
+                                                    <div class="media-body">
+                                                        <p class="media-heading mb-0">Bobby M. Gray<i
+                                                                class="fa fa-circle text-danger mr-1 float-right"></i>
+                                                        </p><small class="float-right text-muted">58 min ago</small>
+                                                        <small class="text-muted">Australia</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">© 2019 Annex by Mannatthemes.</footer>
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script>
+    function openSideBar(){
+        document.getElementById("sideBar").style.marginLeft = "0px";
+        document.getElementById("closebtn").style.display = "block";
+    }
+    function closeSideBar(){
+        document.getElementById("sideBar").style.marginLeft="-300px";
+        document.getElementById("closebtn").style.display = "none";
+    }
+    window.onresize = function(){
+        if(window.innerWidth < 768){
+            document.getElementById("sideBar").style.marginLeft="-300px";
+            document.getElementById("closebtn").style.display = "none";
+        }else{
+            document.getElementById("sideBar").style.marginLeft = "0px";
+            document.getElementById("closebtn").style.display = "none";
+        }
+    }
+</script>
+</html>
