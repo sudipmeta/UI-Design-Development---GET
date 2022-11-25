@@ -11,7 +11,7 @@
 
 <body>
     <hr>
-    <section id="navigation" class="center">
+    <!-- <section id="navigation" class="center">
         <div class="navbar">
             <header>
                 <nav>
@@ -22,7 +22,7 @@
                 </nav>
             </header>
         </div>
-    </section>
+    </section> -->
     <img src="https://www.fiware.org/wp-content/uploads/2018/09/shutterstock_280510247-min.jpg" width="100%">
     <hr>
 
@@ -70,7 +70,7 @@
                     <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br><br>
 
 
-                    <input type="submit" value="Submit" onclick="sectionNext(this)">
+                    <button type="button" onclick="sectionNext(this)">click</button>
                 </div>
             </form>
 
@@ -131,7 +131,7 @@
                     <textarea id="vechile-identification" name="vechile-identification" rows="10"
                         cols="30"></textarea><br><br>
 
-                    <input type="submit" value="Submit" onclick="sectionNext(this)">
+                    <button type="button" onclick="sectionNext(this)">click</button>
                 </div>
             </form>
 
@@ -165,10 +165,10 @@
 
 
 
-    <section id="parking-pricing" class="center hidden-item">
+    <section id="pricing-div" class="center hidden-item">
         <h1>Monthly pricing</h1>
 
-        <div  id="cycle-price">
+        <div style="display: none;" id="cycle-price">
             <h3>Cycle</h3>
             <div class="monthly-pricing-circle">
                 <h4>$100</h4>
@@ -215,25 +215,27 @@
         </div>
 
 
-        <div id="pass" class="hidden-item">
-            <h2>Confirmation:</h2>
-            <p id="pass-price"></p>
-            <div style="display: flex; justify-content: center; padding-bottom: 1%;">
-                <button style="display: none; width: 10%; margin-right: 10px; height: 4%;" id="inr-btn" onclick="currencyChange(this)">Convert to INR</button>
-                <button style="width: 10%; margin-right: 10px; height: 4%;" id="usd-btn" onclick="currencyChange(this)">Convert to USD</button>
-                <button style="width: 10%; margin-left: 10px; height: 4%;" id="yen-btn" onclick="currencyChange(this)">Convert to Yen</button>
-            </div>
-            <button style="width: 15%;" onclick="complete()">Get Pass</button>
-        </div>
 
-        <div id="final" class="hidden-item">
-            <h2>Pass Approved</h2>
-            <a href="test.html"><button style="width: 15%;">Done</button></a>
-        </div>
 
         
     </div>
     </section>
+
+    <div id="pass" class="hidden-item">
+        <h2>Confirmation:</h2>
+        <p id="pass-price"></p>
+        <div style="display: flex; justify-content: center; padding-bottom: 1%;">
+            <button style="display: none; width: 10%; margin-right: 10px; height: 4%;" id="inr-btn" onclick="currencyChange(this)">Convert to INR</button>
+            <button style="width: 10%; margin-right: 10px; height: 4%;" id="usd-btn" onclick="currencyChange(this)">Convert to USD</button>
+            <button style="width: 10%; margin-left: 10px; height: 4%;" id="yen-btn" onclick="currencyChange(this)">Convert to Yen</button>
+        </div>
+        <button style="width: 15%;" onclick="complete()">Get Pass</button>
+    </div>
+
+    <div id="final" class="hidden-item">
+        <h2>Pass Approved</h2>
+        <a href="Assignment(html).html"><button style="width: 15%;">Done</button></a>
+    </div>
 
     <section id="footer">
 

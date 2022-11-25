@@ -55,7 +55,7 @@ padding: 0px;
 }
 section#parking-pricing > div {
 /* background: red; */
-display: inline-block;
+/* display: inline-block; */
 margin: 20px 20px;
 border: 1px solid black;
 border-radius: 5px;
@@ -83,6 +83,11 @@ border-radius: 100%;
     border-radius: 10px;
     display: none;
     height: auto;
+}
+
+#pass{
+    display: none;
+    padding-bottom: 1%;
 }
 /* :checked + #hidden-item {
     display: block;
