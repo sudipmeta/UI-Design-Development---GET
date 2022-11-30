@@ -34,12 +34,13 @@ var MainClass = /** @class */ (function () {
                 ns.style.display = "flex";
             }
         };
-        this.showNextElement = function (element) {
+        this.sectionNext = function (element) {
             var c = element.parentNode;
             var pc = c.parentNode;
             var ppc = pc.parentNode;
-            ppc.style.display = "none";
-            var ns = _this.next(ppc);
+            var z = ppc.parentNode;
+            z.style.display = "none";
+            var ns = _this.next(z);
             ns.style.display = "block";
         };
     }
@@ -119,7 +120,7 @@ var Employee = /** @class */ (function (_super) {
             var contact = document.getElementById("number");
             var num = contact.value;
             if (/^\d+$/.test(num) && num.length >= 8)
-                _this.showNextElement(element);
+                _this.sectionNext(element);
             else
                 alert("Invalid Number");
         };

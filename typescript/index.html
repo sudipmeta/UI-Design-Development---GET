@@ -35,7 +35,7 @@
                 <div>
                     <label for="fullname">Full name:</label><br>
                     <input type="text" id="fname" name="fullname" required>
-                    <button type="button" onclick="setName(emp)">click</button><br>
+                    <button type="button" onclick="emp.setName(this)">click</button><br>
                     <br>
                 </div>
                 <div class="hidden-item">
@@ -45,32 +45,32 @@
                     <label for="gender-male"> Male </label>
                     <input type="checkbox" id="gender-female" name="gender-female" value="female">
                     <label for="gender-female">Female</label><br>
-                    <button type="button" onclick="showNext(emp)">click</button><br>
+                    <button type="button" onclick="emp.showNext(this)">click</button><br>
                 </div>
 
                 <div class="hidden-item">
 
                     <label for="email">Enter your email:</label><br>
                     <input type="email" id="email" name="email" required><br>
-                    <button type="button" onclick="showPass(emp)">click</button><br>
+                    <button type="button" onclick="emp.showPass(this)">click</button><br>
                 </div>
 
                 <div class="hidden-item">
                     <label for="pwd">Password:</label><br>
-                    <input type="password" id="password" name="pwd" required oninput="borderChange(this)"><br><br>
+                    <input type="password" id="password" name="pwd" required oninput="emp.borderChange(this)"><br><br>
 
 
                     <label for="pwd-confirm">Confirm Password:</label><br>
                     <input type="password" id="cpassword" name="pwd-confirm" required><br>
-                    <button type="button" onclick="showContact(emp)">click</button><br>
+                    <button type="button" onclick="emp.showContact(this)">click</button><br>
                 </div>
 
-                <div class="hidden-item">
-                    <label for="phone">Enter your phone number:</label><br>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br><br>
+                <div class="hiden-item">
+                    <label for="number">Enter your phone number:</label><br>
+                    <input type="tel" id="number" name="phone" pattern="[0-9]{10}"><br><br>
 
 
-                    <button type="button" onclick="sectionNext(this)">click</button>
+                    <button type="button" onclick="emp.showVehicle(this)">click</button>
                 </div>
             </form>
 
@@ -94,14 +94,14 @@
 
                     <label for="vechile-brand">Vechile Brand (Company):</label><br>
                     <input type="text" id="vechile-brand" name="vechile-brand" required>
-                    <button type="button" onclick="showNext(veh)">click</button><br><br>
+                    <button type="button" onclick="veh.showNext(this)">click</button><br><br>
                 </div>
 
                 <div class="hidden-item">
 
                     <label for="vechile-model">Vechile model:</label><br>
                     <input type="text" id="vechile-model" name="vechile-model" required>
-                    <button type="button" onclick="showNext(veh)">click</button><br><br>
+                    <button type="button" onclick="veh.showNext(this)">click</button><br><br>
                 </div>
                 <div class="hidden-item">
 
@@ -111,19 +111,19 @@
                         <option value="motor-cycle">Motor-Cycle</option>
                         <option value="car">Car</option>
                     </select><br><br>
-                    <button type="button" onclick="setVehicle(veh)">click</button><br><br>
+                    <button type="button" onclick="veh.setVehicle(this)">click</button><br><br>
                 </div>
                 <div class="hidden-item">
                     <label for="vechile-number">Vechile Number:</label><br>
                     <input type="number" id="vechile-number" name="vechile-number"
                         pattern="[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}" required>
-                    <button type="button" onclick="showNext(veh)">click</button><br><br>
+                    <button type="button" onclick="veh.showNext(this)">click</button><br><br>
                 </div>
 
                 <div class="hidden-item">
                     <label for="employee-id">Employee Id</label><br>
                     <input type="number" id="employee-id" name="employee-id" required>
-                    <button type="button" onclick="showNext(veh)">click</button><br><br>
+                    <button type="button" onclick="veh.showNext(this)">click</button><br><br>
                 </div>
 
                 <div class="hidden-item">
@@ -131,7 +131,7 @@
                     <textarea id="vechile-identification" name="vechile-identification" rows="10"
                         cols="30"></textarea><br><br>
 
-                    <button type="button" onclick="sectionNext(veh)">click</button>
+                    <button type="button" onclick="veh.sectionNext(this)">click</button>
                 </div>
             </form>
 
@@ -175,9 +175,9 @@
                 <p>/month</p>
             </div>
             <div class="all-pricing">
-                <p>$5 daily</p><button class="table-btn" type="button" value="5" onclick="setPrice(pass)">Select</button>
-                <p>$100 monthly</p><button class="table-btn" type="button" value="100" onclick="setPrice(pass)">Select</button>
-                <p>$500 yearly</p><button class="table-btn" type="button" value="500" onclick="setPrice(pass)">Select</button>
+                <p>$5 daily</p><button class="table-btn" type="button" value="5" onclick="pass.setPrice(this)">Select</button>
+                <p>$100 monthly</p><button class="table-btn" type="button" value="100" onclick="pass.setPrice(this)">Select</button>
+                <p>$500 yearly</p><button class="table-btn" type="button" value="500" onclick="pass.setPrice(this)">Select</button>
             </div>
             
 
@@ -190,9 +190,9 @@
                 <p>/month</p>
             </div>
             <div class="all-pricing">
-                <p>$10 daily</p><button class="table-btn" type="button" value="10" onclick="setPrice(pass)">Select</button>
-                <p>$200 monthly</p><button class="table-btn" type="button" value="200" onclick="setPrice(pass)">Select</button>
-                <p>$1000 yearly</p><button class="table-btn" type="button" value="1000" onclick="setPrice(pass)">Select</button>
+                <p>$10 daily</p><button class="table-btn" type="button" value="10" onclick="pass.setPrice(this)">Select</button>
+                <p>$200 monthly</p><button class="table-btn" type="button" value="200" onclick="pass.setPrice(this)">Select</button>
+                <p>$1000 yearly</p><button class="table-btn" type="button" value="1000" onclick="pass.setPrice(this)">Select</button>
             </div>
             
 
@@ -205,9 +205,9 @@
                 <p>/month</p>
             </div>
             <div class="all-pricing">
-                <p>$20 daily</p><button class="table-btn" type="button" value="20" onclick="setPrice(pass)">Select</button>
-                <p>$500 monthly</p><button class="table-btn" type="button" value="500" onclick="setPrice(pass)">Select</button>
-                <p>$3500 yearly</p><button class="table-btn" type="button" value="3500" onclick="setPrice(pass)">Select</button>
+                <p>$20 daily</p><button class="table-btn" type="button" value="20" onclick="pass.setPrice(this)">Select</button>
+                <p>$500 monthly</p><button class="table-btn" type="button" value="500" onclick="pass.setPrice(this)">Select</button>
+                <p>$3500 yearly</p><button class="table-btn" type="button" value="3500" onclick="pass.setPrice(this)">Select</button>
             </div>
             
 
@@ -225,9 +225,9 @@
         <h2>Confirmation:</h2>
         <p id="pass-price"></p>
         <div style="display: flex; justify-content: center; padding-bottom: 1%;">
-            <button style="display: none; width: 10%; margin-right: 10px; height: 4%;" id="inr-btn" onclick="currencyChange(pass)">Convert to INR</button>
-            <button style="width: 10%; margin-right: 10px; height: 4%;" id="usd-btn" onclick="currencyChange(pass)">Convert to USD</button>
-            <button style="width: 10%; margin-left: 10px; height: 4%;" id="yen-btn" onclick="currencyChange(pass)">Convert to Yen</button>
+            <button style="display: none; width: 10%; margin-right: 10px; height: 4%;" id="inr-btn" onclick="pass.currencyChange(this)">Convert to INR</button>
+            <button style="width: 10%; margin-right: 10px; height: 4%;" id="usd-btn" onclick="pass.currencyChange(this)">Convert to USD</button>
+            <button style="width: 10%; margin-left: 10px; height: 4%;" id="yen-btn" onclick="pass.currencyChange(this)">Convert to Yen</button>
         </div>
         <button style="width: 15%;" onclick="complete()">Get Pass</button>
     </div>

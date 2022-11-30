@@ -20,13 +20,13 @@ class MainClass{
         }
     }  
 
-    protected sectionNext = (element) => {
+    public sectionNext = (element) => {
         let c = element.parentNode;
         let pc = c.parentNode;
         let ppc = pc.parentNode;
         let z: HTMLElement = ppc.parentNode;
         z.style.display = `none`;
-        let ns: HTMLElement = this.next(ppc);
+        let ns: HTMLElement = this.next(z);
         ns.style.display = `block`;
     }
 }
@@ -115,7 +115,7 @@ class Employee extends MainClass{
         let num: string = contact.value;
     
         if(/^\d+$/.test(num) && num.length >= 8)
-            this.showNextElement(element);
+            this.sectionNext(element);
         else
             alert(`Invalid Number`);
     }
